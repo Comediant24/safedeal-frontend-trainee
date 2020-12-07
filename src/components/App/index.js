@@ -29,7 +29,12 @@ const GlobalStyled = createGlobalStyle`
     padding: 0;
   }
 
-  h1,h2,h3 {
+  h1, h2, h3 {
     margin: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
   }
 `;
