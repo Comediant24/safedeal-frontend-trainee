@@ -29,6 +29,6 @@ const Wrapper = styled.section`
 `;
 const List = styled.ul`
   display: grid;
-  grid-gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 21px;
+  grid-template-columns: repeat(auto-fit, minmax(229px, 1fr));
 `;

@@ -3,7 +3,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Content from '../Content/index';
 import Header from '../Header/index';
 
-function App({ className }) {
+function App() {
   return (
     <Wrapper>
       <Header />
@@ -16,7 +16,8 @@ function App({ className }) {
 export default App;
 
 const Wrapper = styled.div`
-  width: 768px;
+  max-width: 729px;
+  min-width: 330px;
   margin: 0 auto;
   align-items: center;
   display: flex;
