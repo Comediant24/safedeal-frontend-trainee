@@ -1,23 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { getImages } from '../../api/api';
+import Popup from '../Popup';
 import Card from './Card/index';
 
 const Content = () => {
   const [cards, setCards] = useState([]);
-  console.log('cards', cards);
+  const [selectCard, setSelectCard] = useState([]);
+  console.log('selectCards', selectCard);
 
   useEffect(() => {
     getImages().then((images) => setCards(images));
   }, []);
 
+  const handleCardClick = (card) => {
+    console.log('card', card);
+    setSelectCard({ ...card, isOpen: true });
+  };
+
+  const handleClosePopup = () => {
+    setSelectCard({});
+  };
+
   return (
     <Wrapper>
       <List>
-        {cards.map((image) => (
-          <Card key={image.id} image={image.url} />
+        {cards.map((card) => (
+          <Card key={card.id} card={card} onCardClick={handleCardClick} />
         ))}
       </List>
+      <Popup card={selectCard} onClose={handleClosePopup} />
     </Wrapper>
   );
 };
@@ -26,7 +38,9 @@ export default Content;
 
 const Wrapper = styled.section`
   width: 100%;
+  position: relative;
 `;
+
 const List = styled.ul`
   display: grid;
   grid-gap: 21px;

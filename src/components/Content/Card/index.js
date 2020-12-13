@@ -1,10 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Card = ({ image }) => {
+const Card = ({ card, onCardClick }) => {
+  const handleClick = () => {
+    onCardClick(card);
+  };
+
   return (
     <Wrapper>
-      <Image src={image} alt={`Интресные фото у вас`}></Image>
+      <Image
+        src={card.url}
+        alt={`Интресные фото у вас`}
+        onClick={handleClick}
+      ></Image>
     </Wrapper>
   );
 };
