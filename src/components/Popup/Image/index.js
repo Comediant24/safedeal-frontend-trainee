@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function PopupImage({ card }) {
-  return (
-    <Image src="https://i.picsum.photos/id/241/600/400.jpg?hmac=1NuJX4aVCJtG_nUAvMmzujbsM6m4GZ3p6Nyo0xi9C3w" />
-  );
+function PopupImage({ image }) {
+  return <Image src={image} />;
 }
 
 export default PopupImage;

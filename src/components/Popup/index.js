@@ -6,6 +6,7 @@ import PopupComments from './Comments';
 import close from '../../images/close.svg';
 
 const Popup = ({ card, onClose }) => {
+  console.log('card', card);
   const comments = [
     // тестовый массив комментов
     { id: 154, text: 'Мне нравится', date: 1578054737927 },
@@ -17,12 +18,12 @@ const Popup = ({ card, onClose }) => {
   ];
 
   return (
-    <Wrapper isOpen={true}>
+    <Wrapper isOpen={card.isOpen}>
       <Overlay onClick={onClose} />
       <PopupBody>
-        <PopupImage card={card} />
+        <PopupImage image={card.url} />
         <PopupForm />
-        <PopupComments comments={comments} />
+        <PopupComments comments={card.comments} />
         <CloseButton onClick={onClose} />
       </PopupBody>
     </Wrapper>

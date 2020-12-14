@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const PopupComments = ({ comments }) => {
+const PopupComments = ({ comments = [] }) => {
+  console.log('comments', comments);
   return (
     <Wrapper>
       {comments.map((comment) => (
-        <Comment key={comment.key}>
+        <Comment key={comment.id}>
           <DateComment>
             {new Date(comment.date).toLocaleString('ru').slice(0, 10)}
           </DateComment>

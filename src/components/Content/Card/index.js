@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Card = ({ card, onCardClick }) => {
   const handleClick = () => {
-    onCardClick(card);
+    onCardClick(card.id);
   };
 
   return (

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { getImages } from '../../api/api';
+import { getImages, getImage } from '../../api/api';
 import Popup from '../Popup';
 import Card from './Card/index';
 
@@ -14,8 +14,9 @@ const Content = () => {
   }, []);
 
   const handleCardClick = (card) => {
-    console.log('card', card);
-    setSelectCard({ ...card, isOpen: true });
+    getImage(card).then((imgData) =>
+      setSelectCard({ ...imgData, isOpen: true })
+    );
   };
 
   const handleClosePopup = () => {
