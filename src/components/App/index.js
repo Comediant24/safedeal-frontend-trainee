@@ -25,17 +25,29 @@ const Wrapper = styled.div`
 `;
 
 const GlobalStyled = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
   html, body {
     margin: 0;
     padding: 0;
+    font-family: Roboto, sans-serif;
   }
 
-  h1, h2, h3 {
+  h1, h2, h3, p {
     margin: 0;
   }
 
   ul {
     margin: 0;
     padding: 0;
+  }
+
+  button {
+    padding: 0;
+  }
+
+  figure {
+    padding: 0;
+    margin: 0;
   }
 `;

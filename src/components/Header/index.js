@@ -16,14 +16,9 @@ const Wrapper = styled.header`
 `;
 
 const Title = styled.h1`
-  font-family: Roboto Condensed;
-  font-style: normal;
   font-weight: normal;
   font-size: 36px;
   line-height: 42px;
-  display: flex;
-  align-items: center;
-  text-align: center;
   text-transform: uppercase;
   color: #000000;
 `;

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import FormInput from './Input/index';
 
 const PopupForm = ({ changeValue, name, value, ...rest }) => {
-  console.log('rest', rest);
   const [values, setValues] = useState({});
 
   const handleInputChange = (e) => {

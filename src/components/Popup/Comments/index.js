@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const PopupComments = ({ comments = [] }) => {
-  console.log('comments', comments);
   return (
     <Wrapper>
       {comments.map((comment) => (

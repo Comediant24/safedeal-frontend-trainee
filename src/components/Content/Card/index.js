@@ -25,4 +25,5 @@ const Wrapper = styled.li`
 
 const Image = styled.img`
   width: 100%;
+  cursor: pointer;
 `;

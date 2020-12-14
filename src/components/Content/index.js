@@ -7,20 +7,20 @@ import Card from './Card/index';
 const Content = () => {
   const [cards, setCards] = useState([]);
   const [selectCard, setSelectCard] = useState([]);
-  console.log('selectCards', selectCard);
 
   useEffect(() => {
     getImages().then((images) => setCards(images));
   }, []);
 
   const handleCardClick = (card) => {
+    setSelectCard({});
     getImage(card).then((imgData) =>
       setSelectCard({ ...imgData, isOpen: true })
     );
   };
 
   const handleClosePopup = () => {
-    setSelectCard({});
+    setSelectCard({ ...selectCard, isOpen: false });
   };
 
   return (

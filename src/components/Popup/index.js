@@ -6,17 +6,6 @@ import PopupComments from './Comments';
 import close from '../../images/close.svg';
 
 const Popup = ({ card, onClose }) => {
-  console.log('card', card);
-  const comments = [
-    // тестовый массив комментов
-    { id: 154, text: 'Мне нравится', date: 1578054737927 },
-    {
-      id: 1254,
-      text: 'Еще один бессмысленный комментарий',
-      date: 1578054737927,
-    },
-  ];
-
   return (
     <Wrapper isOpen={card.isOpen}>
       <Overlay onClick={onClose} />
