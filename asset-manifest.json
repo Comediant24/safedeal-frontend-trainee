@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/safedeal-frontend-trainee/static/js/main.f1cc7fbf.chunk.js",
+    "main.js.map": "/safedeal-frontend-trainee/static/js/main.f1cc7fbf.chunk.js.map",
+    "runtime-main.js": "/safedeal-frontend-trainee/static/js/runtime-main.5ba21854.js",
+    "runtime-main.js.map": "/safedeal-frontend-trainee/static/js/runtime-main.5ba21854.js.map",
+    "static/js/2.72ea9285.chunk.js": "/safedeal-frontend-trainee/static/js/2.72ea9285.chunk.js",
+    "static/js/2.72ea9285.chunk.js.map": "/safedeal-frontend-trainee/static/js/2.72ea9285.chunk.js.map",
+    "static/js/3.2717a297.chunk.js": "/safedeal-frontend-trainee/static/js/3.2717a297.chunk.js",
+    "static/js/3.2717a297.chunk.js.map": "/safedeal-frontend-trainee/static/js/3.2717a297.chunk.js.map",
+    "index.html": "/safedeal-frontend-trainee/index.html",
+    "static/js/2.72ea9285.chunk.js.LICENSE.txt": "/safedeal-frontend-trainee/static/js/2.72ea9285.chunk.js.LICENSE.txt",
+    "static/media/close.63feaaed.svg": "/safedeal-frontend-trainee/static/media/close.63feaaed.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5ba21854.js",
+    "static/js/2.72ea9285.chunk.js",
+    "static/js/main.f1cc7fbf.chunk.js"
+  ]
+}
