@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const PopupComments = ({ comments = [] }) => {
+const PopupComments = ({ className, comments = [] }) => {
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       {comments.map((comment) => (
         <Comment key={comment.id}>
           <DateComment>
@@ -22,12 +22,6 @@ const Wrapper = styled.div`
   display: flex;
   gap: 20px;
   flex-direction: column;
-  grid-area: 1/2/3/3;
-  overflow: hidden;
-
-  @media screen and (max-width: 450px) {
-    padding: 0 20px;
-  }
 `;
 
 const Comment = styled.div`

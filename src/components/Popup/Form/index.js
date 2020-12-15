@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import FormInput from './Input/index';
 
-const PopupForm = ({ changeValue }) => {
+const PopupForm = ({ className, changeValue }) => {
   const [values, setValues] = useState({});
 
   const handleInputChange = (e) => {
@@ -19,7 +19,7 @@ const PopupForm = ({ changeValue }) => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <Fieldset>
         <StyledFormInput
           name="name"
@@ -48,16 +48,9 @@ const PopupForm = ({ changeValue }) => {
 export default PopupForm;
 
 const Wrapper = styled.form`
-  grid-column: 1/2;
-  grid-row: 2/3;
   display: flex;
   gap: 20px;
   flex-direction: column;
-
-  @media screen and (max-width: 450px) {
-    padding: 0 20px;
-    order: 3;
-  }
 `;
 
 const StyledFormInput = styled(FormInput)`

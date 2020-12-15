@@ -30,8 +30,8 @@ const Popup = ({ card, onClose }) => {
       <Overlay onClick={onClose} />
       <PopupBody>
         <PopupImage image={card.url} />
-        <PopupForm changeValue={handleSubmit} />
-        <PopupComments comments={comments} />
+        <StyledPopupForm changeValue={handleSubmit} />
+        <StyledPopupComments comments={comments} />
         <CloseButton onClick={onClose} />
       </PopupBody>
     </Wrapper>
@@ -39,6 +39,25 @@ const Popup = ({ card, onClose }) => {
 };
 
 export default Popup;
+
+const StyledPopupForm = styled(PopupForm)`
+  grid-column: 1/2;
+  grid-row: 2/3;
+
+  @media screen and (max-width: 450px) {
+    padding: 0 20px;
+    order: 3;
+  }
+`;
+
+const StyledPopupComments = styled(PopupComments)`
+  grid-area: 1/2/3/3;
+  overflow: hidden;
+
+  @media screen and (max-width: 450px) {
+    padding: 0 20px;
+  }
+`;
 
 const PopupBody = styled.div`
   max-width: 619px;
