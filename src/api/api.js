@@ -22,4 +22,17 @@ const getImage = (id) => {
   });
 };
 
-export { getImages, getImage };
+const addComment = (id, comment) => {
+  return fetch(`${API_URL}images/${id}/comments`, {
+    method: `POST`,
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(comment),
+  }).then((res) => {
+    if (res.ok) {
+      return res.status;
+    }
+    return Promise.reject(`Ошибка: ${res.status}`);
+  });
+};
+
+export { getImages, getImage, addComment };
