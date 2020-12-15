@@ -1,18 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import PopupImage from './Image';
 import PopupForm from './Form';
 import PopupComments from './Comments';
 import close from '../../images/close.svg';
+import { addComment } from '../../api/api';
 
 const Popup = ({ card, onClose }) => {
+  const [comments, setComments] = useState([]);
+
+  useEffect(() => {
+    setComments(card.comments);
+  }, [card]);
+
+  const handleSubmit = (data) => {
+    addComment(card.id, data);
+    setComments([
+      {
+        text: data.comment,
+        id: Math.floor(Math.random() * 100),
+        date: Date.parse(new Date()),
+      },
+      ...comments,
+    ]);
+  };
+
   return (
     <Wrapper isOpen={card.isOpen}>
       <Overlay onClick={onClose} />
       <PopupBody>
         <PopupImage image={card.url} />
-        <PopupForm />
-        <PopupComments comments={card.comments} />
+        <PopupForm changeValue={handleSubmit} />
+        <PopupComments comments={comments} />
         <CloseButton onClick={onClose} />
       </PopupBody>
     </Wrapper>

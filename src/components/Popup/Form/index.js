@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import FormInput from './Input/index';
 
-const PopupForm = ({ changeValue, name, value, ...rest }) => {
+const PopupForm = ({ changeValue }) => {
   const [values, setValues] = useState({});
 
   const handleInputChange = (e) => {
@@ -14,23 +14,23 @@ const PopupForm = ({ changeValue, name, value, ...rest }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(values);
+    changeValue(values);
     setValues({});
   };
 
   return (
-    <Wrapper {...rest}>
+    <Wrapper>
       <Fieldset>
         <StyledFormInput
-          name="userName"
+          name="name"
           onChange={handleInputChange}
-          value={values.userName}
+          value={values.name}
           placeholder="Ваше имя"
         />
         <StyledFormInput
-          name="userComment"
+          name="comment"
           onChange={handleInputChange}
-          value={values.userComment}
+          value={values.comment}
           placeholder="Ваш комментарий"
         />
       </Fieldset>

@@ -22,6 +22,8 @@ const Wrapper = styled.div`
   display: flex;
   gap: 20px;
   flex-direction: column;
+  grid-area: 1/2/3/3;
+  overflow: hidden;
 
   @media screen and (max-width: 450px) {
     padding: 0 20px;
